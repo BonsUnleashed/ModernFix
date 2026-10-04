@@ -1,0 +1,18 @@
+--- a/probe/ClientPart.java
++++ b/probe/ClientPart.java
+@@ -207,6 +207,15 @@
+                     return ok(line);
+                 case "blockevent":
+                     return blockEvent(mc, line, a);
++                case "tabverify": {
++                    try {
++                        Class.forName("org.embeddedt.modernfix.benchmark.TabVerification")
++                                .getMethod("verify").invoke(null);
++                    } catch (ClassNotFoundException expected) {
++                        System.out.println("MF_NATIVE kind=tab_verification result=baseline_original_loop");
++                    }
++                    return ok(line);
++                }
+                 case "nativebench": {
+                     String action = line.substring("nativebench".length()).trim();
+                     java.util.function.BooleanSupplier complete = (java.util.function.BooleanSupplier)

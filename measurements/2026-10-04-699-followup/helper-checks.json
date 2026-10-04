@@ -1,0 +1,26 @@
+{
+  "result": "passed",
+  "source_sha256": "e1e40aff3ff459d693e2dbbbe86d8e46ac190ec95c43ebb720165e33ccba7bb5",
+  "fixture_sha256": {
+    "tests/broken/BrokenTab.java": "a10e5bfb71169b76ad3d73366839417f8cfaf3b74ebaf99dbd1630f4ddd58552",
+    "tests/broken/MissingCollection.java": "4ec15bc7c3ccf93a57199825b5b578f8e0cb3e8dfaaa188023a84d6693f2bf8d",
+    "tests/net/minecraft/world/item/CreativeModeTab.java": "b01570657a94005add39f3d173ddd1e03e19510c5000f630c0250c57fdaea357",
+    "tests/net/minecraft/world/item/ItemStack.java": "a02e5f138ec1dcd611a8f5ddac68800f5965bb91e8f7f1eabbf9bf7a172f8faf",
+    "tests/net/minecraft/world/item/ItemStackLinkedSet.java": "b946f366aa452499540eded47d6b8688d812513bbe1ed2bab33ec6dfb50d524d",
+    "tests/org/embeddedt/modernfix/searchtree/RepresentedTabsCheck.java": "00c6740fdb8d21fc9dfee08dd613b454490f33decc12c5c5b18b5b001efe127d"
+  },
+  "scope": "actual helper, real fastutil 8.5.9, explicit MC API stubs; not native runtime proof",
+  "fastutil_sha256": "9578bf2a1700cf20d21746a2ee89e57ba1abbd37fa9feda68ff5e9a28473a7f9",
+  "runs": [
+    {
+      "mapping": "named",
+      "result": "passed",
+      "output": "PASS cases=321 assertions=664\n"
+    },
+    {
+      "mapping": "production-style",
+      "result": "passed",
+      "output": "PASS cases=321 assertions=664\n"
+    }
+  ]
+}

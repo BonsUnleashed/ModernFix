@@ -1,0 +1,10 @@
+gradle.projectsEvaluated {
+    def root = gradle.rootProject
+    if (root.tasks.findByName('reobfJar') == null) return
+    root.tasks.register('recordBenchmarkJar') {
+        dependsOn root.tasks.named('reobfJar')
+        doLast {
+            root.file('build/benchmark-jar-path.txt').text = root.tasks.named('reobfJar').get().archiveFile.get().asFile.absolutePath
+        }
+    }
+}

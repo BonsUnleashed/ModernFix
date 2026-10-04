@@ -1,0 +1,66 @@
+{
+  "upstream_head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+  "hardware": "AMD Ryzen 9 3900X / NVIDIA GeForce RTX 3080; Windows 10",
+  "runtime": "Eclipse Adoptium 21.0.12.1, G1, Xms2G/Xmx10G, ActiveProcessorCount=8",
+  "client_window": "minimized/background, matching 1280x720 fixture and snapshot frame limits",
+  "cpu_load_percent_before_launch": [
+    1,
+    13
+  ],
+  "preexisting_jvm_at_each_launch": [
+    false,
+    false
+  ],
+  "order": [
+    "baseline",
+    "candidate"
+  ],
+  "replicates_per_arm": 1,
+  "snapshot_top_level_mod_jars": 511,
+  "fixture_enabled_mod_jars": 512,
+  "actual_bake_dispatch_container_counts": {
+    "baseline": 553,
+    "699": 553
+  },
+  "snapshot_bons_and_furious_version": "1.0.26; predates all three disabled counterpart keys",
+  "resource_packs": "19 external file packs; exact names in resource-packs.json",
+  "shaderpack": "ComplementaryUnbound_r5.7.1 + EuphoriaPatches_1.8.6 + ACLight (on)",
+  "configuration_overrides": [
+    "stability_level=BETA",
+    "mixin.perf.compact_entity_models=true",
+    "mixin.perf.faster_item_rendering=false",
+    "mixin.perf.dynamic_languages=false",
+    "mixin.perf.faster_capabilities.bytecode_analysis=false",
+    "mixin.perf.ingredient_item_deduplication=false",
+    "modernfix_bake_location_order=false",
+    "modernfix_cube_bake_memo=false",
+    "modernfix_represented_tabs_index=false"
+  ],
+  "snapshot_manifest_sha256": "f189ebdcdb3457410c109f526024f66a77a2bee0c22c48f0ccce36863bb58e83",
+  "source_world_manifest_sha256": "e27598e54e1ce4790821f645f891a3ddb4b8b2cf194bc12d1c99ec110639e0e5",
+  "source_world_manifest_entries": 247,
+  "world_note": "246 source payload files plus the worker mirror ownership marker; identical between arms",
+  "frozen_inputs_sha256": {
+    "run_client.py": "f4f798eac8c683b6d41be3557506c4ffd86776f69d0c464a343e3e1b91c10564",
+    "scenario-v2.txt": "33ea6ab6b99d29fc9a0e1331a9b6deb7db24813ef81935b184fb0608237cf6ab",
+    "probe-build.json": "964df8025dd58be2487691d666a8ea2b29e58df3c30f947b38bcb0a776e8b81d",
+    "built-arms.json": "d2f12e7eac1b5f97b15ae2d62b27c8a8f7d73e1d4df23d87175e03dd146635b7",
+    "bons_probe_native_mf.jar": "293333b7b3f24fb8c9b547c3805daf9beed4af46a88b352ce9618224291028dc",
+    "size-agent.jar": "50d185f8cbd3caca961a463c91da54cd3fa468e15d71e5e419115d9e895a3b52",
+    "client30.py": "e552a3e2398c9a8acb08f2e29265e6184f2d0077e02251befd6dc2874ea5fc0d",
+    "common30.py": "208b21a991b43c4446270b182e726dece1374a0e1ccfdc3660ca2440d6ceddcc",
+    "env.py": "3d510a7483a26c2c2172210ba7732b8242b18a3e4af30b0bd7267656f7c36fb8",
+    "manifest.json": "f189ebdcdb3457410c109f526024f66a77a2bee0c22c48f0ccce36863bb58e83"
+  },
+  "artifact_sha256": {
+    "modernfix-699-inherited-native.jar": "933bd4c196bfc2e302086f6e21b38e182a69b3ac4862bee4c76e34794c3a2fca",
+    "modernfix-native-699-inherited.jar": "5f60c31ea035f3251b8fac58d63f10c6623051b5de489cddc014ff9d751fb615",
+    "modernfix-native-baseline.jar": "823baed43c82c5a8138ec4a903a760f29104a7cfccc6c9ff2d54b12dea35da7f",
+    "bons_probe_native_mf.jar": "293333b7b3f24fb8c9b547c3805daf9beed4af46a88b352ce9618224291028dc",
+    "size-agent.jar": "50d185f8cbd3caca961a463c91da54cd3fa468e15d71e5e419115d9e895a3b52"
+  },
+  "nonfatal_initial_null_model_stream_exceptions_per_arm": {
+    "baseline": 3,
+    "candidate": 3
+  }
+}

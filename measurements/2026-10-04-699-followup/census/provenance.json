@@ -1,0 +1,26 @@
+{
+  "result": "passed",
+  "purpose": "separate read-only tab collection and strategy census; no native-source change or timing comparison",
+  "hardware": "Ryzen 9 3900X / RTX 3080 worker; separate from the matched timing cohort",
+  "native_699_jar_sha256": "a8f9af52b6b966d82cf2d0095064a7ecf863903a6d41ec24eda451e72b428727",
+  "probe_sha256": "32d78b84d26409b69786124fa1995865c5d8230e9815f3b554b5eff208e7b9ea",
+  "snapshot_manifest_matches_cohort": true,
+  "world_payload_files_matching_cohort": 246,
+  "extra_worker_source_file": "mirror ownership marker only",
+  "fixture_enabled_mod_jars": 512,
+  "represented_tab_list_entries": 243,
+  "represented_tab_list_classes": {
+    "CreativeModeTab": 241,
+    "MekanismCreativeTab": 2
+  },
+  "census_unique_non_search_objects": 241,
+  "census_unique_object_classes": {
+    "CreativeModeTab": 239,
+    "MekanismCreativeTab": 2
+  },
+  "getter_rows": 482,
+  "all_getters_declared_by_stock_class": true,
+  "all_collections_exact_expected_fastutil_class": true,
+  "all_strategies_match_vanilla_factory_identity": true,
+  "limit": "The census uses an identity union of the two public tab list views. The native pass records list entries separately; they are not the same count. The factory reference set class was not separately logged."
+}

@@ -1,0 +1,35 @@
+{
+  "native": {
+    "result": "passed",
+    "exit_code": 0,
+    "head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+    "jdk": "Temurin 21.0.12.1; Java 17 source target",
+    "task": "recordBenchmarkJar depends on reobfJar",
+    "java_tool_options": "-XX:TieredStopAtLevel=1 -XX:+UseSerialGC",
+    "cache": "dedicated clean cache, not the corrupted shared home",
+    "relevant_source_sha256": {
+      "src/main/java/org/embeddedt/modernfix/searchtree/JEIRuntimeCapturer.java": "4360058f97a5e75d3718ce1fb833d03945518841fb3855a8a7983944018570c2",
+      "src/main/java/org/embeddedt/modernfix/searchtree/RepresentedTabsIndex.java": "e1e40aff3ff459d693e2dbbbe86d8e46ac190ec95c43ebb720165e33ccba7bb5",
+      "src/main/java/org/embeddedt/modernfix/common/mixin/perf/compact_entity_models/CubeDefinitionMixin.java": "70fcbd7c3ff361ef452504bf8a13e0df14fd3adb6bedb4f7d4d4f0fdd0b449e8",
+      "src/main/java/org/embeddedt/modernfix/common/mixin/perf/dynamic_resources/ForgeHooksClientMixin.java": "d162fe75310b95ab4f3a48d581245c77854996c642d3be48615eec364645b6e1"
+    }
+  },
+  "fixture": {
+    "result": "passed",
+    "exit_code": 0,
+    "head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+    "jdk": "Temurin 21.0.12.1; Java 17 source target",
+    "task": "recordBenchmarkJar depends on reobfJar",
+    "java_tool_options": "-XX:TieredStopAtLevel=1 -XX:+UseSerialGC",
+    "cache": "dedicated clean cache, not the corrupted shared home",
+    "relevant_source_sha256": {
+      "src/main/java/org/embeddedt/modernfix/benchmark/BenchMetrics.java": "a69976bc39786cc0ab864405d7b72b6517d5e1f2736bfb6bcfaa66fc0f2c7254",
+      "src/main/java/org/embeddedt/modernfix/benchmark/ClientWorkload.java": "16f7155db18a4fbd7d2657ee95dec8d6e4f80af25f4f36fa3839beec82b28f64",
+      "src/main/java/org/embeddedt/modernfix/benchmark/TabVerification.java": "00b438beec31a8d6e1260d7d82ba0423bee10d287bd4e6a249da9529c1343d6f",
+      "src/main/java/org/embeddedt/modernfix/searchtree/JEIRuntimeCapturer.java": "47e0e151addcdd22f693501aad611194518402a8f6aa7bcb39fd8d85c9be4605",
+      "src/main/java/org/embeddedt/modernfix/searchtree/RepresentedTabsIndex.java": "57b1fe10c01538bb2bcedb1db753691d1613d114842afceaa09b343a53e976ae",
+      "src/main/java/org/embeddedt/modernfix/common/mixin/perf/compact_entity_models/CubeDefinitionMixin.java": "010fdd1b9d3e8202e776e8558d8e04e7093d6165c4309acf3984a9f53537a848",
+      "src/main/java/org/embeddedt/modernfix/common/mixin/perf/dynamic_resources/ForgeHooksClientMixin.java": "1d7f089f55647f32ad502e1e2d2dda0430fab00bcac560a318b10579bc2dce77"
+    }
+  }
+}

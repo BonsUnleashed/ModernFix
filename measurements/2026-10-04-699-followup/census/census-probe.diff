@@ -1,0 +1,62 @@
+--- a/ClientPart.java
++++ b/ClientPart.java
+@@ -207,6 +207,7 @@
+                     return ok(line);
+                 case "blockevent":
+                     return blockEvent(mc, line, a);
++                case "tabcensus": censusTabs(); return ok(line);
+                 case "nativebench": {
+                     String action = line.substring("nativebench".length()).trim();
+                     java.util.function.BooleanSupplier complete = (java.util.function.BooleanSupplier)
+@@ -234,6 +235,51 @@
+             Probe1030.LOG.error("PROBE1030 directive [{}] -> failed {}", line, t.toString());
+             return null;
+         }
++    }
++
++
++    private static void censusTabs() throws ReflectiveOperationException {
++        Class<?> base = net.minecraft.world.item.CreativeModeTab.class;
++        java.util.Set<Object> seen = java.util.Collections.newSetFromMap(new java.util.IdentityHashMap<>());
++        java.util.List<Object> tabs = new java.util.ArrayList<>();
++        // Both public vanilla list views are read; the identity union avoids duplicates.
++        // This avoids an SRG name assumption and does not invoke any custom collection getter.
++        for (var method : net.minecraft.world.item.CreativeModeTabs.class.getDeclaredMethods()) {
++            if (java.lang.reflect.Modifier.isPublic(method.getModifiers())
++                    && java.lang.reflect.Modifier.isStatic(method.getModifiers())
++                    && method.getParameterCount() == 0 && method.getReturnType() == java.util.List.class) {
++                for (Object tab : (java.util.List<?>) method.invoke(null)) if (seen.add(tab)) tabs.add(tab);
++            }
++        }
++        java.lang.reflect.Method factory = java.util.Arrays.stream(net.minecraft.world.item.ItemStackLinkedSet.class.getDeclaredMethods())
++                .filter(m -> java.lang.reflect.Modifier.isPublic(m.getModifiers()) && java.lang.reflect.Modifier.isStatic(m.getModifiers())
++                        && m.getParameterCount() == 0 && m.getReturnType() == java.util.Set.class).findFirst().orElseThrow();
++        Object reference = factory.invoke(null);
++        Object referenceStrategy = reference instanceof it.unimi.dsi.fastutil.objects.ObjectLinkedOpenCustomHashSet<?> set ? set.strategy() : null;
++        java.lang.reflect.Method type = java.util.Arrays.stream(base.getDeclaredMethods())
++                .filter(m -> m.getParameterCount() == 0 && m.getReturnType() == net.minecraft.world.item.CreativeModeTab.Type.class).findFirst().orElseThrow();
++        int tabIndex = 0;
++        for (Object tab : tabs) {
++            if (String.valueOf(type.invoke(tab)).equals("SEARCH")) continue;
++            for (var method : base.getDeclaredMethods()) {
++                if (!java.lang.reflect.Modifier.isPublic(method.getModifiers()) || java.lang.reflect.Modifier.isStatic(method.getModifiers())
++                        || method.getParameterCount() != 0 || !java.util.Collection.class.isAssignableFrom(method.getReturnType())) continue;
++                var resolved = tab.getClass().getMethod(method.getName());
++                if (resolved.getDeclaringClass() != base) {
++                    System.out.println("MF_NATIVE kind=tab_collection_census tab="+tabIndex+" tab_class="+tab.getClass().getName()+" getter="+method.getName()+" stock_getter=false");
++                    continue; // A custom getter may have side effects; do not call it during a read-only census.
++                }
++                Object value = method.invoke(tab);
++                Object strategy = value instanceof it.unimi.dsi.fastutil.objects.ObjectLinkedOpenCustomHashSet<?> set ? set.strategy() : null;
++                System.out.println("MF_NATIVE kind=tab_collection_census tab="+tabIndex+" tab_class="+tab.getClass().getName()
++                        +" getter="+method.getName()+" stock_getter=true collection="+(value==null?"null":value.getClass().getName())
++                        +" size="+(value instanceof java.util.Collection<?> collection?collection.size():-1)
++                        +" strategy="+(strategy==null?"null":strategy.getClass().getName())
++                        +" same_type_and_tag_strategy="+(strategy!=null && strategy==referenceStrategy));
++            }
++            tabIndex++;
++        }
++        System.out.println("MF_NATIVE kind=tab_census_complete non_search_tabs="+tabIndex);
+     }
+ 
+     private static void typeSearch(Minecraft mc) throws ReflectiveOperationException {

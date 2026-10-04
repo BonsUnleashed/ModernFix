@@ -1,0 +1,7 @@
+gamemode creative
+gamerule doDaylightCycle false
+time set noon
+weather clear
+@nativebench search
+@tabverify
+@screen close

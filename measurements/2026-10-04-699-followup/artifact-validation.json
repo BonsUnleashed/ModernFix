@@ -1,0 +1,19 @@
+{
+  "result": "passed",
+  "source_sha256": "e1e40aff3ff459d693e2dbbbe86d8e46ac190ec95c43ebb720165e33ccba7bb5",
+  "artifacts_sha256": {
+    "modernfix-699-inherited-native.jar": "933bd4c196bfc2e302086f6e21b38e182a69b3ac4862bee4c76e34794c3a2fca",
+    "modernfix-native-699-inherited.jar": "5f60c31ea035f3251b8fac58d63f10c6623051b5de489cddc014ff9d751fb615",
+    "modernfix-native-baseline.jar": "823baed43c82c5a8138ec4a903a760f29104a7cfccc6c9ff2d54b12dea35da7f",
+    "bons_probe_native_mf.jar": "293333b7b3f24fb8c9b547c3805daf9beed4af46a88b352ce9618224291028dc",
+    "size-agent.jar": "50d185f8cbd3caca961a463c91da54cd3fa468e15d71e5e419115d9e895a3b52"
+  },
+  "native_jar_production_call": "m_261235_",
+  "guard_uses_method_names": false,
+  "native_jar_contains_fixture_classes": false,
+  "checks_per_mapping": {
+    "cases": 321,
+    "assertions": 664
+  },
+  "client_validation": "passed; active indexed path; exact real count and represented-identity agreement"
+}
