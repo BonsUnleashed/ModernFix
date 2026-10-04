@@ -1,0 +1,13 @@
+arm,replicate,phase,label,heap_sample_bytes,gc_count_before,gc_count_after
+baseline,v2-a1-baseline,reload_3,after_reload,9338105608,263,264
+baseline,v2-a1-baseline,reload_3,end,8645290672,288,289
+697,v2-b1-697,reload_3,after_reload,9159706688,247,248
+697,v2-b1-697,reload_3,end,8852076056,271,272
+697,v2-b2-697,reload_3,after_reload,7533468112,264,265
+697,v2-b2-697,reload_3,end,7716607904,286,287
+baseline,v2-a2-baseline,reload_3,after_reload,7693587984,259,261
+baseline,v2-a2-baseline,reload_3,end,9232111896,285,286
+698,v2-c-698,reload_3,after_reload,7520690904,256,257
+698,v2-c-698,reload_3,end,9339982424,280,281
+699,v2-d-699,reload_3,after_reload,7673685880,247,248
+699,v2-d-699,reload_3,end,9275683544,268,269

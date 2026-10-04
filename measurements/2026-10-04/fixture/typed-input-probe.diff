@@ -1,0 +1,46 @@
+--- a/ClientPart.java
++++ b/ClientPart.java
+@@ -208,9 +208,11 @@
+                 case "blockevent":
+                     return blockEvent(mc, line, a);
+                 case "nativebench": {
++                    String action = line.substring("nativebench".length()).trim();
+                     java.util.function.BooleanSupplier complete = (java.util.function.BooleanSupplier)
+                             Class.forName("org.embeddedt.modernfix.benchmark.ClientWorkload")
+-                                    .getMethod("start", String.class).invoke(null, line.substring("nativebench".length()).trim());
++                                    .getMethod("start", String.class).invoke(null, action);
++                    if (action.equals("search")) typeSearch(mc);
+                     return () -> {
+                         if (!complete.getAsBoolean()) return false;
+                         Probe1030.LOG.info("PROBE1030 directive [{}] -> ok", line);
+@@ -232,6 +234,30 @@
+             Probe1030.LOG.error("PROBE1030 directive [{}] -> failed {}", line, t.toString());
+             return null;
+         }
++    }
++
++    private static void typeSearch(Minecraft mc) throws ReflectiveOperationException {
++        var screen = mc.f_91080_;
++        if (!(screen instanceof net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen)) {
++            System.out.println("MF_NATIVE kind=typed_search_unexercised reason=no_creative_screen");
++            return;
++        }
++        java.lang.reflect.Field field = java.util.Arrays.stream(screen.getClass().getDeclaredFields())
++                .filter(f -> f.getType() == net.minecraft.client.gui.components.EditBox.class).findFirst().orElseThrow();
++        field.setAccessible(true);
++        var input = (net.minecraft.client.gui.components.EditBox)field.get(screen);
++        screen.m_7522_(input); // AbstractContainerEventHandler.setFocused
++        input.m_93692_(true); // EditBox.setFocused
++        input.m_94144_(""); // EditBox.setValue
++        var threads = (com.sun.management.ThreadMXBean)java.lang.management.ManagementFactory.getThreadMXBean();
++        long bytes = threads.getThreadAllocatedBytes(Thread.currentThread().getId());
++        long start = System.nanoTime();
++        for (char letter : "stone".toCharArray()) {
++            if (!screen.m_5534_(letter, 0)) throw new IllegalStateException("Creative screen rejected ordinary typed input");
++        }
++        long elapsed = System.nanoTime() - start;
++        long allocated = threads.getThreadAllocatedBytes(Thread.currentThread().getId()) - bytes;
++        System.out.printf("MF_NATIVE kind=typed_search elapsed_ns=%d allocated_bytes=%d characters=5%n", elapsed, allocated);
+     }
+ 
+     static Step ok(String line) {

@@ -1,0 +1,29 @@
+{
+  "upstream_head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+  "arms": {
+    "baseline": {
+      "upstream_head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+      "native_jar_sha256": "823baed43c82c5a8138ec4a903a760f29104a7cfccc6c9ff2d54b12dea35da7f"
+    },
+    "697": {
+      "upstream_head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+      "native_jar_sha256": "2a3f0f88fe7c0852491ab5179a01c7cef479feffdc3d4dc516b8e371dbae05dd"
+    },
+    "698": {
+      "upstream_head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+      "native_jar_sha256": "3d8c26c23056ad29b3a400e340c6b27124e6abfad737824a156f904642a83507"
+    },
+    "699": {
+      "upstream_head": "aa3fff5971affbce1ca0501960158d41c11349b3",
+      "native_jar_sha256": "a8f9af52b6b966d82cf2d0095064a7ecf863903a6d41ec24eda451e72b428727"
+    }
+  },
+  "scene_sha256": "01bdac9b1e6bdccca5b14549f451175e72e615951148c9e8ef31b1ae576d4c26",
+  "probe_jar_sha256": "7f1bdd34cf756055adb47648f1f6760575b15e9dedf6027667ca8961793bbcb9",
+  "size_agent_sha256": "6489c7eb5e5f9280ffd0d1e63da278fd5cc77e3bb27416fd141c5b39f7b69c8b",
+  "host": "AMD Ryzen 9 5900X / NVIDIA RTX3080 / Windows",
+  "runtime": "Eclipse Adoptium Java21.0.12.1, G1, Xms2G/Xmx10G, ActiveProcessorCount8",
+  "config": "ModernFix stability BETA; compact_entity_models enabled in every arm; faster_item_rendering, dynamic_languages, faster_capabilities.bytecode_analysis, ingredient_item_deduplication disabled in every arm",
+  "pack": "511-jar frozen client snapshot, Bons and Furious1.0.26,19 resource packs, Complementary Unbound/EuphoriaPatches/ACLight shaders enabled",
+  "sampling": "one initial load and three actual F3+T reloads per process, ordinary Botania tab typing and actual equipped-player rendering; no direct repeated bake loops"
+}

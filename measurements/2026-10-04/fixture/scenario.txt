@@ -1,0 +1,29 @@
+gamemode creative
+gamerule doDaylightCycle false
+time set noon
+weather clear
+@nativebench cubes
+@echo native_reload_1
+@reload
+@nativebench cubes
+wait 5
+@echo native_reload_2
+@reload
+@nativebench cubes
+wait 5
+@echo native_reload_3
+@reload
+@nativebench cubes
+wait 5
+@nativebench heap after_reload
+@nativebench search
+@screen close
+item replace entity @s armor.head with lowlands_clothing:axolotl_armor_helmet
+item replace entity @s armor.chest with lowlands_clothing:axolotl_armor_chestplate
+item replace entity @s armor.legs with lowlands_clothing:axolotl_armor_leggings
+item replace entity @s armor.feet with lowlands_clothing:axolotl_armor_boots
+@nativebench camera
+wait 10
+@nativebench frames 30
+@nativebench cubes
+@nativebench heap end

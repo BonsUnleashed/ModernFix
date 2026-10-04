@@ -1,0 +1,38 @@
+{
+  "v2-a1-baseline": {
+    "snapshot_top_level_mod_jars": 511,
+    "fixture_enabled_mod_jars": 512,
+    "observed_unique_container_dispatches_per_event": 553,
+    "fixture_probe_mod_jars_added": 1
+  },
+  "v2-b1-697": {
+    "snapshot_top_level_mod_jars": 511,
+    "fixture_enabled_mod_jars": 512,
+    "observed_unique_container_dispatches_per_event": 553,
+    "fixture_probe_mod_jars_added": 1
+  },
+  "v2-b2-697": {
+    "snapshot_top_level_mod_jars": 511,
+    "fixture_enabled_mod_jars": 512,
+    "observed_unique_container_dispatches_per_event": 553,
+    "fixture_probe_mod_jars_added": 1
+  },
+  "v2-a2-baseline": {
+    "snapshot_top_level_mod_jars": 511,
+    "fixture_enabled_mod_jars": 512,
+    "observed_unique_container_dispatches_per_event": 553,
+    "fixture_probe_mod_jars_added": 1
+  },
+  "v2-c-698": {
+    "snapshot_top_level_mod_jars": 511,
+    "fixture_enabled_mod_jars": 512,
+    "observed_unique_container_dispatches_per_event": 553,
+    "fixture_probe_mod_jars_added": 1
+  },
+  "v2-d-699": {
+    "snapshot_top_level_mod_jars": 511,
+    "fixture_enabled_mod_jars": 512,
+    "observed_unique_container_dispatches_per_event": 553,
+    "fixture_probe_mod_jars_added": 1
+  }
+}

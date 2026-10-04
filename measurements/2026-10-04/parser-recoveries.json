@@ -1,0 +1,40 @@
+{
+  "v2-a1-baseline": [],
+  "v2-b1-697": [
+    {
+      "line": 4245,
+      "through_line": 4246,
+      "kind": "interleaved_logger_fragments",
+      "recovered_metric": "MF_NATIVE kind=bake_handler_ModifyBakingResult name=snowrealmagic elapsed_ns=139261700 allocated_bytes=80193072"
+    }
+  ],
+  "v2-b2-697": [],
+  "v2-a2-baseline": [
+    {
+      "line": 4101,
+      "through_line": 4102,
+      "kind": "interleaved_logger_fragments",
+      "recovered_metric": "MF_NATIVE kind=bake_handler_ModifyBakingResult name=forgeendertech elapsed_ns=923700 allocated_bytes=78008"
+    },
+    {
+      "line": 4104,
+      "through_line": 4105,
+      "kind": "interleaved_logger_fragments",
+      "recovered_metric": "MF_NATIVE kind=bake_handler_ModifyBakingResult name=modernfix elapsed_ns=6300 allocated_bytes=2320"
+    },
+    {
+      "line": 4183,
+      "through_line": 4184,
+      "kind": "interleaved_logger_fragments",
+      "recovered_metric": "MF_NATIVE kind=bake_handler_ModifyBakingResult name=snowrealmagic elapsed_ns=272111700 allocated_bytes=80619096"
+    },
+    {
+      "line": 4190,
+      "through_line": 4191,
+      "kind": "interleaved_logger_fragments",
+      "recovered_metric": "MF_NATIVE kind=bake_handler_ModifyBakingResult name=cloth_config elapsed_ns=7600 allocated_bytes=2352"
+    }
+  ],
+  "v2-c-698": [],
+  "v2-d-699": []
+}

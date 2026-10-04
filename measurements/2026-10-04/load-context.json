@@ -1,0 +1,26 @@
+[
+  {
+    "replicate": "v2-a1-baseline",
+    "cpu_percent_two_second_sample_immediately_before_launch": 5.521071545246647
+  },
+  {
+    "replicate": "v2-b1-697",
+    "cpu_percent_two_second_sample_immediately_before_launch": 57.06380208333333
+  },
+  {
+    "replicate": "v2-b2-697",
+    "cpu_percent_two_second_sample_immediately_before_launch": 56.3743071405282
+  },
+  {
+    "replicate": "v2-a2-baseline",
+    "cpu_percent_two_second_sample_immediately_before_launch": 50.87890625
+  },
+  {
+    "replicate": "v2-c-698",
+    "cpu_percent_two_second_sample_immediately_before_launch": 56.80338541666667
+  },
+  {
+    "replicate": "v2-d-699",
+    "cpu_percent_two_second_sample_immediately_before_launch": 50.85078534031413
+  }
+]
